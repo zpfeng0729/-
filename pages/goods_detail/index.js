@@ -71,6 +71,7 @@ Page({
     // 获取缓存中的商品收藏数组
     let collect = wx.getStorageSync('collect') || [];
     // 判断当前商品是否被收藏
+    // some(): 判断某一类数组里面有没有这个东西,只要一个存在就返回true
     let isCollect = collect.some(v => v.goods_id === this.GoodsInfo.goods_id);
     this.setData({
       goodsObj: {
@@ -89,7 +90,6 @@ Page({
   handlePreviewImage(e) {
     // 1、先构造要预览的图片数组
     const urls = this.GoodsInfo.pics.map(v => v.pics_mid);
-    console.log(urls);
     // 2、接收传递过来的图片url
     const current = e.currentTarget.dataset.url;
     wx.previewImage({
