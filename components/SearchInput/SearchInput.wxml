@@ -1,0 +1,7 @@
+<view class="search_input">
+  <!-- open-type="navigate"表示跳转到非tabBar页面 -->
+  <navigator url="/pages/search/index" open-type="navigate">
+    搜索
+  </navigator>
+    
+</view>

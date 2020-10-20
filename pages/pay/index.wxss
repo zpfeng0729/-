@@ -1,0 +1,102 @@
+page {
+  padding-bottom: 90rpx;
+  /* 容器加了固定定位会挡在下面 */
+}
+.receive_address_row .user_info_row {
+  display: flex;
+  padding: 20rpx;
+}
+.receive_address_row .user_info_row .user_info {
+  flex: 5;
+}
+.receive_address_row .user_info_row .user_phone {
+  flex: 3;
+  text-align: right;
+}
+.cart_content .cart_title {
+  padding: 20rpx;
+  font-size: 36rpx;
+  color: var(--themeColor);
+  border-top: 1rpx solid currentColor;
+  border-bottom: 1rpx solid currentColor;
+}
+.cart_content .cart_main .cart_item {
+  display: flex;
+  padding: 10rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.cart_content .cart_main .cart_item navigator.cart_img_wrap {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart_content .cart_main .cart_item navigator.cart_img_wrap image {
+  width: 80%;
+}
+.cart_content .cart_main .cart_item .cart_info_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 4;
+}
+.cart_content .cart_main .cart_item .cart_info_wrap .goods_name {
+  -webkit-line-clamp: 2;
+  /* 用来限制在一个块元素显示的文本的行数，为了实现该效果，它需要组合其他的webkit属性 */
+  display: -webkit-box;
+  /* 必须结合的属性，将对象作为弹性伸缩盒子模型显示 */
+  -webkit-box-orient: vertical;
+  /* 必须结合的属性，设置或检索伸缩盒子对象的子元素的排列方式 */
+  overflow: hidden;
+  color: #666;
+}
+.cart_content .cart_main .cart_item .cart_info_wrap .goods_price_wrap {
+  display: flex;
+  justify-content: space-between;
+  /* 先两边贴边，再平分剩余空间 */
+}
+.cart_content .cart_main .cart_item .cart_info_wrap .goods_price_wrap .goods_price {
+  color: var(--themeColor);
+  font-size: 34rpx;
+}
+.cart_content .cart_main .cart_item .cart_info_wrap .goods_price_wrap .cart_num_tool {
+  display: flex;
+}
+.cart_content .cart_main .cart_item .cart_info_wrap .goods_price_wrap .cart_num_tool .goods_num {
+  width: 55rpx;
+  height: 55rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer_tool {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* 记得要加宽度，因为块级元素添加绝对定位或者固定定位，如果不给宽度或者高度，默认大小是内容的大小 */
+  height: 90rpx;
+  background-color: #fff;
+  display: flex;
+  border-top: 1rpx solid #ccc;
+}
+.footer_tool .total_price_wrap {
+  flex: 5;
+  padding-right: 15rpx;
+  text-align: right;
+}
+.footer_tool .total_price_wrap .total_price .total_price_text {
+  color: var(--themeColor);
+  font-size: 34rpx;
+  font-weight: 600;
+}
+.footer_tool .order_pay_wrap {
+  flex: 3;
+  background-color: var(--themeColor);
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

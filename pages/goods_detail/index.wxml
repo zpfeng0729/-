@@ -1,0 +1,56 @@
+<!--pages/goods_detail/index.wxml-->
+<view class="detail_swiper">
+	<swiper autoplay circular indicator-dots>
+		<swiper-item wx:for="{{goodsObj.pics}}" wx:key="pics_id" bindtap="handlePreviewImage" data-url="{{item.pics_mid}}">
+			<image class="" src="{{item.pics_mid}}" mode="widthFix" />
+		</swiper-item>
+	</swiper>
+</view>
+
+<view class="goods_price">￥{{goodsObj.goods_price}}
+</view>
+
+<view class="goods_name_row">
+	<view class="goods_name">{{goodsObj.goods_name}}{{goodsObj.goods_name}}
+	</view>
+	<view class="goods_collect" bindtap="handleCollect">
+		<text class="iconfont {{isCollect?'icon-shoucang1':'icon-shoucang'}}">
+    </text>
+		<view class="collect_text">收藏</view>
+	</view>
+</view>
+
+<view class="goods_info">
+	<view class="goods_info_title">图文详情</view>
+	<view class="goods_info_content">
+		<!-- 富文本 -->
+		<rich-text nodes="{{goodsObj.goods_introduce}}">
+		</rich-text>
+	</view>
+</view>
+
+<view class="btn_tool">
+	<view class="tool_item">
+		<view class="iconfont icon-kefu"></view>
+		<view>联系客服</view>
+		<!-- open-type="contact"：打开客服会话，如果用户在会话中点击消息卡片后返回小程序 -->
+		<button open-type="contact"></button>
+	</view>
+	<view class="tool_item">
+		<view class="iconfont icon-yixianshi-"></view>
+		<view>分享</view>
+		<!-- open-type="share"：触发用户转发，使用前建议先阅读使用指引 -->
+		<button open-type="share"></button>
+	</view>
+	<!-- open-type="switchTab"：跳转到tabBar页面，并关闭其他所有非tabBar页面 -->
+	<navigator class="tool_item" url="/pages/cart/index" open-type="switchTab">
+		<view class="iconfont icon-gouwuche"></view>
+		<view>购物车</view>
+	</navigator>
+	<view class="tool_item btn_cart" bindtap="handleCartAdd">
+		加入购物车
+	</view>
+	<view class="tool_item btn_buy">
+		立即购买
+	</view>
+</view>

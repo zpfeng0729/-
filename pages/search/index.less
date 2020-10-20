@@ -1,0 +1,38 @@
+page {
+  background-color: #dedede;
+  padding: 20rpx;
+}
+.search_row {
+  height: 60rpx;
+  display: flex;
+  input {
+    flex: 6;
+    height: 100%;
+    background-color: #fff;
+    margin-right: 15rpx;
+    padding-left: 30rpx;
+  }
+  button {
+    flex: 1;
+    height: 100%;
+    // list-style: 100%;
+    font-size: 26rpx;
+    // 把按钮变成伸缩盒子，让按钮里面的文字水平垂直居中显示
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.search_content {
+  margin-top: 30rpx;;
+  .search_item {
+    background-color: #fff;
+    font-size: 26rpx;
+    padding: 15rpx 10rpx;
+    border-bottom: 1rpx solid #ccc;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

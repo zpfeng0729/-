@@ -1,0 +1,4 @@
+<!-- open-type="getUserInfo"：获取⽤⼾信息，可以从bindgetuserinfo回调中获取到⽤⼾信息 -->
+<button type="primary" plain style="margin-top:40rpx" bindgetuserinfo="handleGetUserInfo" open-type="getUserInfo">
+	登录
+</button>
