@@ -1,5 +1,5 @@
 /**
- * Promise形式的getSetting
+ * Promise形式的获取用户的当前设置getSetting
  */
 export const getSetting = () => {
   return new Promise((resolve, reject) => {
@@ -15,7 +15,7 @@ export const getSetting = () => {
 }
 
 /**
- * Promise形式的chooseAddress
+ * Promise形式的获取用户收货地址chooseAddress
  */
 export const chooseAddress = () => {
   return new Promise((resolve, reject) => {
@@ -31,7 +31,7 @@ export const chooseAddress = () => {
 }
 
 /**
- * Promise形式的openSetting
+ * Promise形式的调起客户端小程序设置界面，返回用户设置的操作结果openSetting
  */
 export const openSetting = () => {
   return new Promise((resolve, reject) => {
@@ -47,7 +47,7 @@ export const openSetting = () => {
 }
 
 /**
- * Promise形式的showModal
+ * Promise形式的显示模态对话框showModal
  */
 export const showModal = ({
   content
@@ -67,7 +67,7 @@ export const showModal = ({
 }
 
 /**
- * Promise形式的showToast
+ * Promise形式的显示消息提示框showToast
  */
 export const showToast = ({
   title
